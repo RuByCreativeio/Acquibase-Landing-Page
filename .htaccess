@@ -6,8 +6,4 @@ RewriteCond %{HTTP_REFERER} !^http://(www\.)?acquibase\.com [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?acquibase\.com.*$ [NC]
 RewriteRule \.(gif|jpg|js|txt|css|ttf|otf)$ /getoutofmyfiles [L]
 
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
-
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+RewriteRule    ^/?$    index.html    [NC,L]
