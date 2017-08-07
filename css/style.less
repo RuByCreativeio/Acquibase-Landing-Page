@@ -35,6 +35,7 @@ body {
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	background: #0F0F0F;
+	height: 100vh;
 }
 a {
 	color: #FFF;
@@ -56,14 +57,15 @@ nav {
 	position: relative;
 	z-index: 2;
 	font-family: @Lato;
-	padding: 30px 0 0 0;
-	height: 5vh;
+	height: 10vh;
 	animation: fadein 0.4s ease-in forwards;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	#nav-container {
 		width: 1200px;
 		margin: 0 auto;
 		@media(max-width: 1200px) {
-			width: auto;
 			padding: 0 20px 0 20px;
 		}
 		#nav-brand {
@@ -109,14 +111,13 @@ nav {
 main {
 	#header-section {
 		width: 45%;
+		height: 45vh;
 		max-width: 500px;
-		height: 40vh;
-		margin: 20px auto 0 auto;
+		margin: 0 auto 0 auto;
 		text-align: center;
 		position: relative;
 		@media(max-width: 500px) {
 			width: 75%;
-			height: auto;
 		}
 		span {
 			font-family: @Lato;
@@ -186,54 +187,59 @@ main {
 			}
 		}
 	}
-	#product-shot {
-		width: 1200px;
-		height: 50vh;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		position: relative;
-		@media(max-width: 1200px) {
-			width: auto;
-			height: 40vh;
+}
+#product-shot {
+	width: 1200px;
+	height: 45vh;
+	margin: 0 auto;
+	position: relative;
+	bottom: 0;
+	@media(max-width: 1200px) {
+		width: auto;
+	}
+	#first-screen {
+		background: url('../img/acquibase.png');
+		background-position: top center;
+		background-size: cover;
+		width: 90%;
+		height: 100%;
+		border-radius: 12px 12px 0 0;
+		animation: fade-in-up 0.6s cubic-bezier(0.1 , 1 , .03 , 2) forwards;
+		margin: auto;
+		@media(max-width: 560px) {
+			height: 65%;
 		}
-		#first-screen {
-			background: url('../img/acquibase.png');
-			background-position: top center;
-			background-size: cover;
-			width: 90%;
-			height: 100%;
-			border-radius: 12px 12px 0 0;
-			animation: fade-in-up 0.6s cubic-bezier(0.1 , 1 , .03 , 2) forwards;
-			@media(max-width: 560px) {
-				height: 65%;
-			}
+	}
+	#second-screen {
+		position: absolute;
+		background: #252525;
+		width: 86%;
+		height: 100%;
+		border-radius: 12px;
+		top: -10px;
+		z-index: -1;
+		animation: fade-in-up 0.8s cubic-bezier(0.1 , 1 , .03 , 2) forwards;
+		margin: auto;
+		left: 0;
+		right: 0;
+		@media(max-width: 560px) {
+			height: 65%;
 		}
-		#second-screen {
-			position: absolute;
-			background: #252525;
-			width: 86%;
-			height: 100%;
-			border-radius: 12px;
-			top: -10px;
-			z-index: -1;
-			animation: fade-in-up 0.8s cubic-bezier(0.1 , 1 , .03 , 2) forwards;
-			@media(max-width: 560px) {
-				height: 65%;
-			}
-		}
-		#third-screen {
-			position: absolute;
-			background: #2B2B2B;
-			width: 82%;
-			height: 100%;
-			border-radius: 12px;
-			top: -20px;
-			z-index: -2;
-			animation: fade-in-up 1.0s cubic-bezier(0.1 , 1 , .03 , 2) forwards;
-			@media(max-width: 560px) {
-				height: 65%;
-			}
+	}
+	#third-screen {
+		position: absolute;
+		background: #2B2B2B;
+		width: 82%;
+		height: 100%;
+		border-radius: 12px;
+		top: -20px;
+		z-index: -2;
+		animation: fade-in-up 1.0s cubic-bezier(0.1 , 1 , .03 , 2) forwards;
+		margin: auto;
+		left: 0;
+		right: 0;
+		@media(max-width: 560px) {
+			height: 65%;
 		}
 	}
 }
